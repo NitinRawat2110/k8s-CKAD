@@ -15,8 +15,9 @@ Imperative commands:
   - alias kubectl="k"
   - k create deployment space-alien-welcome-message-generator --image=httpd:alpine --replicas=1 --dry-run=client -o YAML > deployment.yml
 #...
+```
 
-Update the YAML and add the following snippet for readinessProbe under 'container spec' and not deployment spec
+Update the YAML and add the following snippet for readinessProbe under 'container spec' and not deployment spec.
 
 ```yaml
         readinessProbe:
@@ -27,5 +28,5 @@ Update the YAML and add the following snippet for readinessProbe under 'containe
          initialDelaySeconds: 10
          periodSeconds: 5
 #...
-
+```
 
