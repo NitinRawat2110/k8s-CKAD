@@ -21,19 +21,18 @@ Finally scale down Deployment wonderful-v1 to 0 replicas
 
 Update the deployment container image from [httpd:alpine](httpd:alpine) to [nginx:alpine](nginx:alpine) with 4 replicas and labels app: wonderful and version: v2
 
-  check the [wonderful-v2](wonderful-v2) YAML [here](https://github.com/NitinRawat2110/k8s-CKAD/blob/main/rollingUpdateGreenBlue/wonderful-v2.yml)
+  Check the [wonderful-v2](wonderful-v2) YAML [here](https://github.com/NitinRawat2110/k8s-CKAD/blob/main/rollingUpdateGreenBlue/wonderful-v2.yml)
   
-```yaml
   Create the wonderful-v2 deployment 
+```yaml
   k create -f wonderful-v2.yml
 ```
 
-Change the selector label of Service wonderful to version: v2
+Change the selector label of Service wonderful to version: v2. Check the [service](service) YAML [here](https://github.com/NitinRawat2110/k8s-CKAD/blob/main/rollingUpdateGreenBlue/wonderful-v1.yml)
 
 ```yaml
   k edit svc wonderful
 ```
-  check the [service](service) YAML [here](https://github.com/NitinRawat2110/k8s-CKAD/blob/main/rollingUpdateGreenBlue/wonderful-v1.yml)
   
 Finally scale down Deployment wonderful-v1 to 0 replicas
 
