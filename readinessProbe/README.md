@@ -35,6 +35,7 @@ Once updated create your deployment
 # Scenario 2
 
 Make the Deployment ready.
+
 Exec into the Pod and create file /tmp/ready .
 Observe that the Pod is ready.
 
